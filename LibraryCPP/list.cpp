@@ -73,7 +73,7 @@ ListItem *list_insert(List *list, Data data)
 
 ListItem *list_insert_after(List *list, ListItem *item, Data data)
 {
-    if (item == nullptr || (list->firstItem == nullptr && list->lastItem == nullptr)) {
+    if (item == nullptr || list->firstItem == nullptr) {
         return list_insert(list, data);
     }
     else{
